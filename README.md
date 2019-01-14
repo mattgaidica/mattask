@@ -3,12 +3,12 @@
   
   
 /tests/**DefinitionsofInequality.m**  
-[ ] Add a condition to handle undefined numbers  
+- [ ] Add a condition to handle undefined numbers  
   
 /tests/**EquivalencePropertiesofEquality.m**  
-[ ] add entry for Transitive Property -Matt  
+- [ ] add entry for Transitive Property -Matt  
   
 /tests/testsub/**TestString.m**  
-[ ] Display each character of a one new line  
+- [ ] Display each character of a one new line  
   
-EOF20190114131855
+EOF20190114132130
