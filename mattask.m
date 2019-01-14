@@ -1,7 +1,7 @@
 % [ ] github auto-update?
 
 % SETUP
-tasksFilename = 'README.md';
+tasksFilename = 'TASKS.md';
 useWorkingDir = true;
 fileExtensions = {'.m'};
 expression = '\[(x| )\].*';
@@ -60,6 +60,6 @@ else
         fprintf(fid,'%s%s',tasks(iTask).task,nlChar);
     end
 end
-fprintf(fid,'%s%s',nlChar,nlChar);
+fprintf(fid,'%s',nlChar);
 fprintf(fid,'EOF%s',datestr(now,'yyyymmddHHMMSS'));
 fid = fclose(fid);
