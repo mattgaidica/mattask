@@ -45,7 +45,7 @@ end
 % generate .md file
 fid = fopen(tasksFilename,'w');
 fprintf(fid,'# Tasks %s',nlChar);
-fprintf(fid,'*Last Updated %s*%s',datestr(now,'mmm.dd,yyyy'),[nlChar nlChar]);
+fprintf(fid,'*Last Updated %s*%s',datestr(now,'mmm.dd, yyyy'),[nlChar nlChar]);
 curFilename = '';
 if numel(tasks) == 0
     fprintf(fid,'No tasks.');
@@ -60,6 +60,6 @@ else
         fprintf(fid,'%s%s',tasks(iTask).task,nlChar);
     end
 end
-fprintf(fid,'%s',nlChar);
+fprintf(fid,'%s%s',nlChar,nlChar);
 fprintf(fid,'EOF%s',datestr(now,'yyyymmddHHMMSS'));
 fid = fclose(fid);

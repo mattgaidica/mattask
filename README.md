@@ -1,5 +1,5 @@
 # Tasks   
-*Last Updated Jan.14,2019*  
+*Last Updated Jan.14, 2019*  
   
   
 /tests/**DefinitionsofInequality.m**  
@@ -11,4 +11,5 @@
 /tests/testsub/**TestString.m**  
 [ ] Display each character of a one new line  
   
-EOF20190114131457
+  
+EOF20190114131750
