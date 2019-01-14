@@ -1,13 +1,17 @@
 % [ ] github auto-update task list?
 % [ ] carry over text above Tasks listing
 
-% SETUP
+% config
 tasksFilename = 'README.md';
-useWorkingDir = true;
+useWorkingDir = false;
 fileExtensions = {'.m'};
 expression = '\[(x| )\].*';
 skipString = 'skiptasks';
 nlChar = ['  ',newline]; % newline
+openTaskFile = true;
+
+disp([newline,'<<< mattask >>>']);
+disp('Select a folder to find tasks...');
 
 % set working directory
 if useWorkingDir
@@ -49,9 +53,12 @@ for iFile = 1:numel(listing)
         end
     end
 end
+disp([num2str(taskCount),' tasks in ',num2str(numel(listing)),' files...']);
 
 % generate .md file
-fid = fopen(tasksFilename,'w');
+disp(['Writing task file...']);
+taskFile = fullfile(workingDir,tasksFilename);
+fid = fopen(taskFile,'w');
 fprintf(fid,'# Tasks %s',nlChar);
 fprintf(fid,'*Last Updated %s*%s',datestr(now,'mmm.dd, yyyy'),[nlChar nlChar]);
 curFilename = '';
@@ -71,3 +78,11 @@ end
 fprintf(fid,'%s',nlChar);
 fprintf(fid,'EOF%s',datestr(now,'yyyymmddHHMMSS'));
 fid = fclose(fid);
+if fid == 0
+    disp('Success!');
+    if openTaskFile
+        open(taskFile);
+    end
+else
+   disp('Error. The task file did not close properly.'); 
+end
