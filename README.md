@@ -1,4 +1,4 @@
-#Tasks 
+# Tasks 
 *Last Updated Jan.14,2019*
 
 
@@ -11,4 +11,4 @@
 /tests/testsub/**TestString.m**
 [ ] Display each character of a one new line
 
-EOF20190114130519
+EOF20190114130717

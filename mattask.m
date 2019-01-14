@@ -43,7 +43,7 @@ end
 
 % generate .md file
 fid = fopen(tasksFilename,'w');
-fprintf(fid,'#Tasks %s',newline);
+fprintf(fid,'# Tasks %s',newline);
 fprintf(fid,'*Last Updated %s*%s',datestr(now,'mmm.dd,yyyy'),[newline newline]);
 curFilename = '';
 if numel(tasks) == 0
