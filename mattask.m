@@ -2,6 +2,7 @@
 % [ ] carry over text above Tasks listing
 
 % config
+w = whos;
 tasksFilename = 'README.md';
 useWorkingDir = false;
 fileExtensions = {'.m'};
@@ -23,11 +24,10 @@ end
 % list all files recursively
 listing = struct;
 for iExt = 1:numel(fileExtensions)
-    listing = dir(['**/*',fileExtensions{iExt}]);
+    listing = dir([workingDir,filesep,'**',filesep,'*',fileExtensions{iExt}]);
 end
 % remove self
 listing = listing(~cellfun(@(S) strcmp([mfilename,'.m'],S), {listing.name}));
-% [ ] can we skip files that have already been scanned AND have no tasks?
 
 % extract tasks
 tasks = {};
@@ -53,9 +53,9 @@ for iFile = 1:numel(listing)
         end
     end
 end
-disp('Found ',[num2str(taskCount),' tasks in ',num2str(numel(listing)),' files...']);
+disp(['Found ',num2str(taskCount),' tasks in ',num2str(numel(listing)),' files...']);
 
-% generate .md file
+% generate .md task file
 disp(['Writing task file...']);
 taskFile = fullfile(workingDir,tasksFilename);
 fid = fopen(taskFile,'w');
@@ -63,7 +63,7 @@ fprintf(fid,'# Tasks %s',nlChar);
 fprintf(fid,'*Last Updated %s*%s',datestr(now,'mmm.dd, yyyy at HH:MM'),[nlChar nlChar]);
 curFilename = '';
 if numel(tasks) == 0
-    fprintf(fid,'No tasks.');
+    fprintf(fid,'No tasks.%s',nlChar);
 else
     for iTask = 1:numel(tasks)
         if isempty(curFilename) || ~strcmp(curFilename,listing(tasks(iTask).file).name)
@@ -86,3 +86,6 @@ if fid == 0
 else
    disp('Error. The task file did not close properly.'); 
 end
+
+% cleanup
+clearvars('-except',w(:).name);
