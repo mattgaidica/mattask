@@ -1,10 +1,11 @@
 % [ ] github auto-update?
 
 % SETUP
+tasksFilename = 'README.md';
 useWorkingDir = true;
 fileExtensions = {'.m'};
 expression = '\[(x| )\].*';
-tasksFilename = 'README.md';
+nlChar = '\'; % newline
 
 % set working directory
 if useWorkingDir
@@ -43,8 +44,8 @@ end
 
 % generate .md file
 fid = fopen(tasksFilename,'w');
-fprintf(fid,'# Tasks %s',newline);
-fprintf(fid,'*Last Updated %s*%s',datestr(now,'mmm.dd,yyyy'),[newline newline]);
+fprintf(fid,'# Tasks %s',nlChar);
+fprintf(fid,'*Last Updated %s*%s',datestr(now,'mmm.dd,yyyy'),[nlChar nlChar]);
 curFilename = '';
 if numel(tasks) == 0
     fprintf(fid,'No tasks.');
@@ -53,10 +54,12 @@ else
         if isempty(curFilename) || ~strcmp(curFilename,listing(tasks(iTask).file).name)
             curFilename = listing(tasks(iTask).file).name;
             curFolder = listing(tasks(iTask).file).folder;
-            fprintf(fid,'%s%s%s**%s**%s',newline,strrep(curFolder,workingDir,''),filesep,curFilename,newline);
+            fprintf(fid,'%s',nlChar);
+            fprintf(fid,'%s%s**%s**%s',strrep(curFolder,workingDir,''),filesep,curFilename,nlChar);
         end
-        fprintf(fid,'%s%s',tasks(iTask).task,newline);
+        fprintf(fid,'%s%s',tasks(iTask).task,nlChar);
     end
 end
-fprintf(fid,'%sEOF%s',newline,datestr(now,'yyyymmddHHMMSS'));
+fprintf(fid,'%s',nlChar);
+fprintf(fid,'EOF%s',datestr(now,'yyyymmddHHMMSS'));
 fid = fclose(fid);
