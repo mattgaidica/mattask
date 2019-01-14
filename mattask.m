@@ -4,7 +4,7 @@
 useWorkingDir = true;
 fileExtensions = {'.m'};
 expression = '\[(x| )\].*';
-tasksFilename = 'tasks.md';
+tasksFilename = 'README.md';
 
 % set working directory
 if useWorkingDir
