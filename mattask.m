@@ -5,7 +5,7 @@ tasksFilename = 'README.md';
 useWorkingDir = true;
 fileExtensions = {'.m'};
 expression = '\[(x| )\].*';
-nlChar = [newline,'\']; % newline
+nlChar = ['  ',newline]; % newline
 
 % set working directory
 if useWorkingDir
