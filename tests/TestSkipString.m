@@ -1,4 +1,4 @@
-% [ ] Setup addition and subtraction
+% [x] Setup addition and subtraction
 a = 1;
 b = 2;
 % [x] Use a and b to demonstrate addition
