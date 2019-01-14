@@ -1,4 +1,5 @@
 % [ ] github auto-update?
+% [ ] carry over text above Tasks listing
 
 % SETUP
 tasksFilename = 'README.md';
