@@ -11,9 +11,9 @@
   
 /tests/**TestSkipString.m**  
 - [ ] Setup addition and subtraction `(ln001)`  
-- [x] Use a and b to demonstrate `(ln006)`  
+- [x] Use a and b to demonstrate addition `(ln004)`  
   
 /tests/testsub/**TestString.m**  
 - [ ] Display each character of a one new line `(ln003)`  
   
-EOF20190114134840
+EOF20190114135210
