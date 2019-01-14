@@ -57,7 +57,7 @@ else
             fprintf(fid,'%s',nlChar);
             fprintf(fid,'%s%s**%s**%s',strrep(curFolder,workingDir,''),filesep,curFilename,nlChar);
         end
-        fprintf(fid,'`(ln%s)` %s%s',num2str(tasks(iTask).line,'%03d'),['- ',tasks(iTask).task],nlChar);
+        fprintf(fid,'%s `(ln%s)`%s',['- ',tasks(iTask).task],num2str(tasks(iTask).line,'%03d'),nlChar);
     end
 end
 fprintf(fid,'%s',nlChar);
