@@ -6,10 +6,10 @@
 - [ ] Add a condition to handle undefined numbers `(ln005)`  
   
 /tests/**EquivalencePropertiesofEquality.m**  
-- [ ] add exclamation point! `(ln012)`  
+- [x] add exclamation point! `(ln012)`  
 - [ ] add entry for Transitive Property -Matt `(ln015)`  
   
 /tests/testsub/**TestString.m**  
 - [ ] Display each character of a one new line `(ln003)`  
   
-EOF20190114133735
+EOF20190114134010

@@ -9,7 +9,7 @@ end
 % Symmetric
 b = a;
 if a == b
-    disp('a and b are symmetric'); % [ ] add exclamation point!
+    disp('a and b are symmetric!'); % [x] add exclamation point!
 end
 
 % [ ] add entry for Transitive Property -Matt
