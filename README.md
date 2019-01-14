@@ -3,13 +3,13 @@
   
   
 /tests/**DefinitionsofInequality.m**  
-- [ ] Add a condition to handle undefined numbers  
+- [ ] Add a condition to handle undefined numbers `(ln005)`  
   
 /tests/**EquivalencePropertiesofEquality.m**  
-- [ ] add exclimation point!  
-- [ ] add entry for Transitive Property -Matt  
+- [ ] add exclimation point! `(ln012)`  
+- [ ] add entry for Transitive Property -Matt `(ln015)`  
   
 /tests/testsub/**TestString.m**  
-- [ ] Display each character of a one new line  
+- [ ] Display each character of a one new line `(ln003)`  
   
-EOF20190114132301
+EOF20190114132650
