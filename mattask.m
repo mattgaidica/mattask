@@ -6,6 +6,7 @@ tasksFilename = 'README.md';
 useWorkingDir = true;
 fileExtensions = {'.m'};
 expression = '\[(x| )\].*';
+skipString = 'skiptasks';
 nlChar = ['  ',newline]; % newline
 
 % set working directory
@@ -33,6 +34,12 @@ for iFile = 1:numel(listing)
     while ~feof(fid)
         lnCount = lnCount + 1;
         tline = fgetl(fid);
+        % exit file if skipString encountered
+        matchStr = regexp(tline,skipString,'match');
+        if ~isempty(matchStr)
+            break;
+        end
+        % build task list
         matchStr = regexp(tline,expression,'match');
         if ~isempty(matchStr)
             taskCount = taskCount + 1;
