@@ -6,9 +6,10 @@
 - [ ] Add a condition to handle undefined numbers  
   
 /tests/**EquivalencePropertiesofEquality.m**  
+- [ ] add exclimation point!  
 - [ ] add entry for Transitive Property -Matt  
   
 /tests/testsub/**TestString.m**  
 - [ ] Display each character of a one new line  
   
-EOF20190114132130
+EOF20190114132301
