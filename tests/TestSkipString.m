@@ -1,10 +1,10 @@
 % [ ] Setup addition and subtraction
 a = 1;
 b = 2;
+% [x] Use a and b to demonstrate addition
 c = a + b;
-d = a - b;
-% [x] Use a and b to demonstrate
+disp(num2str(c));
 
 % skiptasks
-% [x] Calculate c
-% [ ] Calculate d
+% [x] Display c
+% [ ] Use a and b to demonstrate subtraction
