@@ -53,14 +53,14 @@ for iFile = 1:numel(listing)
         end
     end
 end
-disp([num2str(taskCount),' tasks in ',num2str(numel(listing)),' files...']);
+disp('Found ',[num2str(taskCount),' tasks in ',num2str(numel(listing)),' files...']);
 
 % generate .md file
 disp(['Writing task file...']);
 taskFile = fullfile(workingDir,tasksFilename);
 fid = fopen(taskFile,'w');
 fprintf(fid,'# Tasks %s',nlChar);
-fprintf(fid,'*Last Updated %s*%s',datestr(now,'mmm.dd, yyyy'),[nlChar nlChar]);
+fprintf(fid,'*Last Updated %s*%s',datestr(now,'mmm.dd, yyyy at HH:MM'),[nlChar nlChar]);
 curFilename = '';
 if numel(tasks) == 0
     fprintf(fid,'No tasks.');
