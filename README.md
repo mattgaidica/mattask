@@ -10,10 +10,10 @@
 - [ ] add entry for Transitive Property -Matt `(ln015)`  
   
 /tests/**TestSkipString.m**  
-- [ ] Setup addition and subtraction `(ln001)`  
+- [x] Setup addition and subtraction `(ln001)`  
 - [x] Use a and b to demonstrate addition `(ln004)`  
   
 /tests/testsub/**TestString.m**  
 - [ ] Display each character of a one new line `(ln003)`  
   
-EOF20190114135210
+EOF20190114135246
