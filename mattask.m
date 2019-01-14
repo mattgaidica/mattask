@@ -1,4 +1,4 @@
-% [ ] github auto-update?
+% [ ] github auto-update task list?
 % [ ] carry over text above Tasks listing
 
 % SETUP
