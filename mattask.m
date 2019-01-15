@@ -3,13 +3,15 @@
 
 % config
 w = whos;
-tasksFilename = 'README.md';
 useWorkingDir = false;
+tasksFilename = 'README.md';
 fileExtensions = {'.m'};
-expression = '\[(x| )\].*';
 skipString = 'skiptasks';
-nlChar = ['  ',newline]; % newline
 openTaskFile = true;
+
+% constants
+nlChar = ['  ',newline]; % newline
+expression = '\[(x| )\].*';
 
 disp([newline,'<<< mattask >>>']);
 disp('Select a folder to find tasks...');
