@@ -14,6 +14,7 @@ All tasks are identified with the regex pattern: `\[(x| )\].*` The following are
 All of the configuration variables can be found at the top of the *mattasks.m* file.
 
 Variable | Type | Description
+---------|------|------------
 `useWorkingDir` | boolean | `true` uses working directory and `false` opens the folder selection dialog at runtime
 `tasksFilename` | string | sets the output filename (recommended: *README.md* or *TASKS.md*)
 `fileExtensions` | cell | list of file extensions to search through
